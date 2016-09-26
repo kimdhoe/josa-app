@@ -12,13 +12,12 @@ const renderHeader = () =>
        ]
      )
 
-const renderOutput = ({ subject, result: { text, failed } }) => {
-  return div( '.Output'
-            , [ p('.Output-subject',                             [ subject ])
-              , p(`.Output-result ${failed ? '.is-error' : ''}`, [ text ])
-              ]
-            )
-}
+const renderOutput = ({ subject, result: { text, failed } }) =>
+  div( '.Output'
+     , [ p('.Output-subject',                             [ subject ])
+       , p(`.Output-result ${failed ? '.is-error' : ''}`, [ text ])
+       ]
+     )
 
 const renderOutputs = outputs =>
   div('.Outputs', outputs.map(renderOutput))
