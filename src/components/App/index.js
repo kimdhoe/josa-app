@@ -14,10 +14,10 @@ const App = sources => {
 
   const blur$ = sources.DOM.select('.Prompt-input').events('blur')
 
-  return { DOM:         vdom$
-         , printed:     outputs$
-         , shouldFocus: xs.combine(prompt$.filter(p => p.shouldFocus) , blur$)
-                          .map(([ p, e ]) => e)
+  return { DOM:     vdom$
+         , printed: outputs$
+         , focus:   xs.combine(prompt$.filter(p => p.shouldFocus) , blur$)
+                      .map(([ p, e ]) => e)
 
          }
 }
