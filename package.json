@@ -1,5 +1,5 @@
 {
-  "name": "josa-test-repl",
+  "name": "josa-repl",
   "version": "0.0.1",
   "description": "REPL application for testing Josa package",
   "main": "index.js",
