@@ -1,0 +1,75 @@
+$code-font-family: 'Source Code Pro', monospace;
+$color-base00: #657b83;
+$color-base01: #586e75;
+$color-base02: #073642;
+$color-base03: #002b36;
+$color-base0: #839496;
+$color-base1: #93a1a1;
+$color-base2: #eee8d5;
+$color-base3: #fdf6e3;
+$color-yellow: #b58900;
+$color-red: #dc322f;
+$color-blue: #268bd2;
+$color-cyan: #2aa198;
+$color-green: #859900;
+$base-text-color: $color-base00;
+$muted-text-color: $color-base1;
+
+.Header {
+  color: $color-base0;
+}
+
+.Header-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Header-description {
+  margin-top: 0;
+
+  @include clearfix();
+}
+
+.Header-josa {
+  display: block;
+  float: left;
+  padding-right: 0.5em;
+  font-size: 15px;
+}
+
+.Output-subject, .Output-result {
+  margin: 0;
+  line-height: 1.7;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.Output-result {
+  color: $color-cyan;
+
+  &.is-error {
+    color: $color-red;
+  }
+}
+
+.Prompt {
+  position: relative;
+  background-color: $color-blue;
+}
+
+.Prompt-symbol {
+  position: absolute;
+  padding: 1px 0;
+  line-height: 1.7;
+  color: $color-yellow;
+ }
+
+.Prompt-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  line-height: 1.7;
+  font-family: 'Source Code Pro', monospace;
+  background-color: $color-base3;
+}
