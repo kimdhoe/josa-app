@@ -1,20 +1,13 @@
 import { div, h1, input, p, span } from '@cycle/dom'
 
+const listOfJosa =
+  [ '은', '는', '이', '가', '을', '를', '와', '과', '이어', '여', '으로', '로', '이에요', '예요', '이었', '였', '아', '야', '이?' ]
+
 const renderHeader = () =>
   div( '.Header'
      , [ h1('.Header-title', ['Josa Test REPL'])
        , p( '.Header-description'
-          , [ span('.Header-josa', [ '#{은}' ]), span('.Header-josa', [ '#{는}'])
-            , span('.Header-josa', [ '#{이}' ]), span('.Header-josa', [ '#{가}'])
-            , span('.Header-josa', [ '#{을}' ]), span('.Header-josa', [ '#{를}'])
-            , span('.Header-josa', [ '#{와}' ]), span('.Header-josa', [ '#{과}'])
-            , span('.Header-josa', [ '#{이어}' ]), span('.Header-josa', [ '#{여}'])
-            , span('.Header-josa', [ '#{으로}' ]), span('.Header-josa', [ '#{로}'])
-            , span('.Header-josa', [ '#{이에요}' ]), span('.Header-josa', [ '#{예요}'])
-            , span('.Header-josa', [ '#{이었}' ]), span('.Header-josa', [ '#{였}'])
-            , span('.Header-josa', [ '#{아}' ]), span('.Header-josa', [ '#{야}'])
-            , span('.Header-josa', [ '#{이?}' ])
-            ]
+          , listOfJosa.map(josa => span('.Header-josa', [ `#{${josa}}` ]))
           )
        ]
      )

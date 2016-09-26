@@ -29,10 +29,10 @@ const mkOutput = text => {
   }
 }
 
-// A Prompt is an object: { edited:       Array<string>
-//                        , history:      History
-//                        , current:      number
-//                        , shouldFocus?: boolean
+// A Prompt is an object: { edited:      Array<string>
+//                        , history:     History
+//                        , current:     number
+//                        , shouldFocus: boolean
 //                        }
 //
 // A History is an Array<string>.
@@ -73,7 +73,7 @@ const promptModel = action$ =>
     (acc, x) => {
       switch (x.type) {
         case 'edit':
-          const edited = acc.edited
+          const edited = acc.edited.slice()
           edited[acc.current] = x.text
 
           return { ...acc
@@ -91,7 +91,6 @@ const promptModel = action$ =>
             return acc
 
           return { ...acc
-                 , history:     acc.history
                  , current:     acc.current + 1
                  , shouldFocus: true
                  }
@@ -100,7 +99,6 @@ const promptModel = action$ =>
             return acc
 
           return { ...acc
-                 , history:     acc.history
                  , current:     acc.current - 1
                  , shouldFocus: true
                  }

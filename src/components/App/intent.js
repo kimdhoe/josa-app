@@ -40,13 +40,10 @@ const intent = domSource => {
     .map(e => ({ type: 'clear' }))
 
   const clearLine$ = keyDown$
-    .filter(e => e.ctrlKey && e.keyCode === KEY_U
-           )
+    .filter(e => e.ctrlKey && e.keyCode === KEY_U)
     .map(e => ({ type: 'clearLine' }))
 
-  const action$ = xs.merge(edit$, submit$, goPrev$, goNext$, clear$, clearLine$)
-
-  return action$
+  return xs.merge(edit$, submit$, goPrev$, goNext$, clear$, clearLine$)
 }
 
 export default intent
