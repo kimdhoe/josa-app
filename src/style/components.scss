@@ -17,16 +17,38 @@ $muted-text-color: $color-base1;
 
 .Header {
   color: $color-base0;
+  margin-bottom: 1em;
 }
 
 .Header-title {
   margin: 0;
+  display: inline-block;
   font-size: 15px;
   font-weight: bold;
 }
 
+.Header-meta {
+  display: inline-block;
+  margin-left: 3em;
+  font-size: 0.85em;
+}
+
+.Header-author {
+  letter-spacing: 1px;
+}
+
+.Header-link {
+  margin: 0 0.7em;
+  letter-spacing: 1px;
+}
+
 .Header-description {
   margin-top: 0;
+  font-size: 0.85em;
+}
+
+.Header-josaList {
+  margin-top: 1em;
 
   @include clearfix();
 }
@@ -36,6 +58,15 @@ $muted-text-color: $color-base1;
   float: left;
   padding-right: 0.5em;
   font-size: 15px;
+}
+
+.Header-exampleTitle, .Header-example {
+  margin: 0;
+  font-size: 0.85em;
+}
+
+.Header-example {
+  margin-left: 1em;
 }
 
 .Output-subject, .Output-result {
